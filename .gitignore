@@ -1,0 +1,27 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# logs
+npm-debug.log*
+
+# raw photo library — the working source of originals (very large; not part of
+# the site). The photos the site actually uses live in src/assets/. Keep your
+# own backup of this folder.
+project photos/
+
+# local editor/agent settings
+.claude/settings.local.json

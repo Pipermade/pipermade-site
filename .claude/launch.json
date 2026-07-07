@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pipermade-dev",
+      "runtimeExecutable": "/Users/lukepiper/.local/node/node-v22.14.0-darwin-arm64/bin/node",
+      "runtimeArgs": ["node_modules/astro/astro.js", "dev"],
+      "port": 4321
+    }
+  ]
+}
