@@ -40,6 +40,15 @@ const {
       } catch (e) {}
     })();
   </script>
+  <style is:global>
+    /* click-to-call "Call" button, and keep both nav buttons visible on phones */
+    .btn.ghost{background:transparent;color:var(--walnut)}
+    .btn.ghost:hover{background:var(--walnut);color:var(--cream-on-dark);border-color:var(--walnut)}
+    @media(max-width:720px){
+      .nav-links{gap:12px}
+      nav .nav-links li:nth-last-child(-n+2){display:block}
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -50,6 +59,7 @@ const {
         <li><a href="/work">Work</a></li>
         <li><a href="/#process">Process</a></li>
         <li><a href="/#about">About</a></li>
+        <li><a class="btn ghost" href="tel:+16082399726">Call</a></li>
         <li><a class="btn" href="/#inquire">Start a project</a></li>
       </ul>
     </div>
@@ -63,7 +73,7 @@ const {
       <div class="links">
         <a href="/work">Work</a><a href="/#process">Process</a><a href="/#about">About</a><a href="/#inquire">Inquire</a>
       </div>
-      <div style="font-size:13px">Madison, Wisconsin · <a href="#">@pipermade</a></div>
+      <div style="font-size:13px">Madison, Wisconsin · <a href="tel:+16082399726">(608) 239-9726</a> · <a href="#">@pipermade</a></div>
     </div>
   </footer>
 
