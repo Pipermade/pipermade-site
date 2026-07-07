@@ -152,11 +152,11 @@ import shop from '../assets/projects/shop.jpg';
           <li>Currently booking projects for fall 2026</li>
         </ul>
       </div>
-      <form class="reveal" name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
-        <input type="hidden" name="form-name" value="inquiry" />
-        <p hidden aria-hidden="true">
-          <label>Leave this field empty if you're human: <input name="bot-field" /></label>
-        </p>
+      <form id="inquiry-form" class="reveal">
+        <input type="hidden" name="access_key" value="6beafcc3-1638-4986-bf6d-d3d99f2b797e" />
+        <input type="hidden" name="subject" value="New inquiry from the Pipermade website" />
+        <input type="hidden" name="from_name" value="Pipermade website" />
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
         <div class="two">
           <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
           <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
@@ -184,3 +184,35 @@ import shop from '../assets/projects/shop.jpg';
     </div>
   </section>
 </Layout>
+
+<script>
+  // Send the inquiry through Web3Forms, then show the branded thank-you page.
+  const form = document.getElementById('inquiry-form') as HTMLFormElement | null;
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      const data = Object.fromEntries(new FormData(form).entries());
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (json.success) {
+          window.location.href = '/thanks';
+        } else {
+          throw new Error(json.message || 'submission failed');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = label;
+        alert('Sorry — your inquiry didn’t send. Please email us directly at luke@pipermade.com.');
+      }
+    });
+  }
+</script>
