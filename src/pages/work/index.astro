@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const projects = (await getCollection('projects'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout
+  title="Selected Work — Custom Cabinetry, Built-ins & Furniture · Madison, WI"
+  description="Selected custom cabinetry, built-ins, and furniture built by hand at Pipermade in Madison, Wisconsin."
+>
+  <header class="page-head wrap">
+    <h1>Selected Work</h1>
+    <p>A few of the pieces and built-ins we've designed and built by hand in our Madison shop.</p>
+  </header>
+
+  <section class="work-index">
+    <div class="wrap">
+      <div class="cards">
+        {projects.map((p) => (
+          <a class="card reveal" href={`/work/${p.id}`}>
+            <div class="panel photo">
+              <Image src={p.data.cardImage ?? p.data.heroImage} alt={p.data.cardAlt ?? p.data.heroAlt} widths={[360, 560, 720]} sizes="(max-width: 860px) 100vw, 33vw" />
+            </div>
+            <span class="eyebrow">{p.data.category}</span>
+            <h3>{p.data.title}</h3>
+            <p class="scope">{p.data.scope}</p>
+            <p class="materials">{p.data.materials.join(' · ')}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,182 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+
+import hero from '../assets/projects/hero.jpg';
+import arnoldCredenza from '../assets/projects/arnold-credenza/05-in-use.jpg';
+import builtins from '../assets/projects/builtins.jpg';
+import credenza from '../assets/projects/credenza.jpg';
+import shop from '../assets/projects/shop.jpg';
+---
+
+<Layout>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Custom cabinetry · Built-ins · Furniture — Madison, Wis.</span>
+        <h1><em>Handmade</em> for your home.</h1>
+        <p>Pipermade designs and builds custom cabinetry, built-ins, and furniture for people who want work that fits their home exactly — measured, cut, and finished by hand in a Madison workshop.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="/#inquire">Start a project</a>
+          <a class="quiet-link" href="/#work">See selected work</a>
+        </div>
+      </div>
+      <div class="panel photo" role="img" aria-label="Full-wall built-in paneling and shelving in light wood, designed and built by Pipermade">
+        <Image src={hero} alt="Full-wall built-in paneling and shelving in light wood, designed and built by Pipermade" widths={[560, 900, 1280]} sizes="(max-width: 860px) 100vw, 45vw" loading="eager" fetchpriority="high" />
+      </div>
+    </div>
+  </header>
+
+  <!-- dovetail seam: linen → paper -->
+  <svg class="seam" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true" style="background:var(--linen)">
+    <defs>
+      <pattern id="dt1" width="120" height="26" patternUnits="userSpaceOnUse">
+        <path d="M0 26 L0 10 L18 10 L28 0 L52 0 L62 10 L120 10 L120 26 Z" fill="#F7F5E6"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="26" fill="url(#dt1)"/>
+  </svg>
+
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Selected work</span>
+          <h2>Every project begins as a conversation about a room.</h2>
+        </div>
+        <a class="quiet-link" href="/work">View all projects</a>
+      </div>
+      <div class="cards">
+        <a class="card reveal" href="/work/arnold-credenza">
+          <div class="panel photo">
+            <Image src={arnoldCredenza} alt="The Arnold Credenza in a room, holding a row of vinyl records behind an open door, with a globe and stacked books on top" widths={[360, 560, 720]} sizes="(max-width: 860px) 100vw, 33vw" />
+          </div>
+          <span class="eyebrow">Furniture</span>
+          <h3>Arnold Credenza</h3>
+          <p class="scope">A low mid-century credenza in cherry with woven-cord sliding doors and open shelving, on splayed tapered legs.</p>
+          <p class="materials">Cherry · Woven cord</p>
+        </a>
+        <a class="card reveal" href="/work/vanilla-wardrobe">
+          <div class="panel photo">
+            <Image src={builtins} alt="Built-in pine wardrobes wrapping a window with an integrated desk" widths={[360, 560, 720]} sizes="(max-width: 860px) 100vw, 33vw" />
+          </div>
+          <span class="eyebrow">Built-ins</span>
+          <h3>Vanilla Wardrobe</h3>
+          <p class="scope">A full wall of built-in wardrobes wrapping the window, with a desk set into the reveal.</p>
+          <p class="materials">Solid pine</p>
+        </a>
+        <a class="card reveal" href="/work/bradley-credenza">
+          <div class="panel photo">
+            <Image src={credenza} alt="The Bradley Credenza in black stained maple and walnut with brass hardware, door open" widths={[360, 560, 720]} sizes="(max-width: 860px) 100vw, 33vw" />
+          </div>
+          <span class="eyebrow">Furniture</span>
+          <h3>Bradley Credenza</h3>
+          <p class="scope">A credenza in black stained maple and walnut with brass hardware — an original Pipermade design.</p>
+          <p class="materials">Black stained maple · Walnut · Brass</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- dovetail seam: paper → walnut -->
+  <svg class="seam" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true" style="background:var(--paper)">
+    <defs>
+      <pattern id="dt2" width="120" height="26" patternUnits="userSpaceOnUse">
+        <path d="M0 26 L0 10 L18 10 L28 0 L52 0 L62 10 L120 10 L120 26 Z" fill="#2F3A2B"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="26" fill="url(#dt2)"/>
+  </svg>
+
+  <section class="process" id="process">
+    <div class="wrap">
+      <span class="eyebrow reveal">How it works</span>
+      <h2 class="reveal">A clear process, from first sketch to final install.</h2>
+      <p class="lede reveal">Custom work shouldn't feel uncertain. Here's exactly what happens after you reach out.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <span class="num">I</span>
+          <h3>Consultation</h3>
+          <p>We talk through the space, how you use it, and what you're picturing. We'll visit, measure, and listen.</p>
+          <span class="time">Week 1</span>
+        </div>
+        <div class="step reveal">
+          <span class="num">II</span>
+          <h3>Design &amp; proposal</h3>
+          <p>You receive drawings, material samples, and a fixed price — so there are no surprises later.</p>
+          <span class="time">Weeks 2–4</span>
+        </div>
+        <div class="step reveal">
+          <span class="num">III</span>
+          <h3>The build</h3>
+          <p>Your piece is built by hand in our Madison shop, with photo updates as the work takes shape.</p>
+          <span class="time">6–10 weeks</span>
+        </div>
+        <div class="step reveal">
+          <span class="num">IV</span>
+          <h3>Installation</h3>
+          <p>We install everything ourselves — scribed to your walls, finished in place, cleaned up completely.</p>
+          <span class="time">1–3 days</span>
+        </div>
+      </div>
+      <div class="budget-note reveal">
+        <p><span class="serif">A note on budget —</span> built-in projects typically begin around $8,500, and full kitchens around $30,000. If that's in range, the consultation is free and there's no obligation.</p>
+        <a class="btn light" href="/#inquire">Start the conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="panel reveal photo" role="img" aria-label="Luke Piper marking out joinery at the bench in the Pipermade shop">
+        <Image src={shop} alt="Luke Piper marking out joinery at the bench in the Pipermade shop" widths={[420, 640, 860]} sizes="(max-width: 860px) 100vw, 40vw" />
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">The shop</span>
+        <h2>No CNC. No production line. Just handwork.</h2>
+        <p>Pipermade is a small Madison workshop led by Luke Piper, working alongside Tyler. What began as building furniture on nights and weekends is now a full-time practice devoted to cabinetry, built-ins, and furniture.</p>
+        <p>There's no automation in our shop. Every dovetail, mortise, and edge profile is done individually — the way this work was done when it was built to last a century. The people who measure your room are the same ones building the piece and standing in your home on install day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inquire" id="inquire">
+    <div class="wrap inquire-grid">
+      <div class="reveal">
+        <span class="eyebrow">Start a project</span>
+        <h2>Tell us about your space.</h2>
+        <p class="lede">A few details are all it takes to get started. We respond to every inquiry within two business days.</p>
+        <ul>
+          <li>Serving Madison and the surrounding area</li>
+          <li>Architects, designers &amp; builders — trade inquiries welcome</li>
+          <li>Currently booking projects for fall 2026</li>
+        </ul>
+      </div>
+      <form class="reveal" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Inquiry sent — talk soon.'">
+        <div class="two">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" /></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="type">Project type</label>
+            <select id="type" name="type">
+              <option>Built-ins</option><option>Cabinetry / kitchen</option>
+              <option>Furniture</option><option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="budget">Budget range</label>
+            <select id="budget" name="budget">
+              <option>$5k – $10k</option><option>$10k – $25k</option>
+              <option>$25k – $50k</option><option>$50k – $100k</option>
+              <option>$100k+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="msg">About the project</label><textarea id="msg" name="message" placeholder="The room, the problem, the timeline — whatever you know so far."></textarea></div>
+        <button class="btn light" type="submit">Send inquiry</button>
+      </form>
+    </div>
+  </section>
+</Layout>
