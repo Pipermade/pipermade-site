@@ -7,7 +7,7 @@ materials:
   - Cherry
   - Danish cord
 location: Madison, Wisconsin
-summary: A low, mid-century-inspired credenza in solid cherry, with Danish-cord sliding doors, open shelving, and hand-cut dovetail joinery.
+summary: A low, mid-century-inspired credenza in cherry, with Danish-cord sliding doors, open shelving, and hand-cut dovetail joinery.
 heroImage: ../../assets/projects/arnold-credenza/01-front-open.jpg
 heroAlt: The Arnold Credenza viewed straight on, its two Danish-cord doors slid apart to reveal open shelving in the center, standing on splayed tapered legs.
 cardImage: ../../assets/projects/arnold-credenza/05-in-use.jpg
@@ -23,7 +23,7 @@ gallery:
     alt: The credenza in a room, holding a row of vinyl records behind an open door, with a globe and stacked books on top.
 ---
 
-The Arnold Credenza is a low, mid-century-inspired case piece in solid cherry, lifted on splayed, tapered legs. Two sliding doors, faced in hand-woven Danish cord, run on the front; slid apart, they open onto interior shelving and a run of upright dividers sized for records.
+The Arnold Credenza is a low, mid-century-inspired case piece in cherry, lifted on splayed, tapered legs. Two sliding doors, faced in hand-woven Danish cord, run on the front; slid apart, they open onto interior shelving and a run of upright dividers sized for records.
 
 Every joint is cut by hand. The top corners are joined with through-dovetails, their dark contrasting keys set into the lighter wood — visible, deliberate, and done one at a time. The frame is kept slim so the cord panels and the grain of the case carry the piece.
 
