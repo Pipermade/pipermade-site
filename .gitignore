@@ -25,3 +25,6 @@ project photos/
 
 # local editor/agent settings
 .claude/settings.local.json
+
+# logo source artifact (trimmed version lives in src/assets)
+pipermade-logo-final.png

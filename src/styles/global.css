@@ -42,8 +42,9 @@ nav{
   border-bottom:1px solid rgba(51,38,28,.14);
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,48px);max-width:1140px;margin:0 auto}
-.wordmark{font-family:'Sorts Mill Goudy',serif;font-size:24px;text-decoration:none;letter-spacing:.01em}
-.wordmark span{color:var(--brass);font-style:italic}
+.wordmark{font-family:'Sorts Mill Goudy',serif;font-size:24px;text-decoration:none;letter-spacing:.01em;display:inline-flex;align-items:center;gap:8px}
+.wordmark .mark{height:1.7em;width:auto;flex:none}
+.wordmark em{color:var(--brass);font-style:italic}
 .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
 .nav-links a{text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.04em;opacity:.85;transition:opacity .15s}
 .nav-links a:hover{opacity:1}
@@ -154,6 +155,7 @@ form{display:grid;gap:16px}
 footer{background:var(--walnut-deep);color:rgba(239,230,214,.65);padding:44px 0}
 .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 .foot .wordmark{color:var(--cream-on-dark);font-size:22px}
+.foot .wordmark .mark{filter:brightness(1.45) saturate(.85)}
 .foot a{text-decoration:none}
 .foot a:hover{color:var(--cream-on-dark)}
 .foot .links{display:flex;gap:22px;font-size:14px}
